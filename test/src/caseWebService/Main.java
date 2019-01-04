@@ -13,7 +13,8 @@ public class Main {
         ColorFactory colorFactory=abstractColorFactory.colorFactory("Clolor");
         colorFactory.getColor("red").showValue();
         colorFactory.getColor("greed").showValue();
+		System.out.print("我第二次进来喔");
 		System.out.print("我第一次进来喔");
-
+		System.out.print("我第三次进来喔");
     }
 }
