@@ -1,20 +1,23 @@
 package caseWebService;
 
-import caseImplement.AbstractColorFactory;
-import caseImplement.ColorFactory;
-import caseImplement.Factory;
-import interfaceCase.Red;
+
+import caseImplement.AbstractFactory;
+import caseImplement.AbstractFactoryProducer;
 
 public class Main {
-
     public static void main(String[] args) {
-
-        AbstractColorFactory abstractColorFactory =new AbstractColorFactory();
-        //这里我只实现颜色工厂
-        ColorFactory colorFactory=abstractColorFactory.colorFactory("Clolor");
-        colorFactory.getColor("red").showValue();
-        colorFactory.getColor("greed").showValue();
-        //有兴趣的童鞋可以实现一下图形工厂shapFactory
-
+        //构造器（用于获取工厂）
+        AbstractFactoryProducer abstractFactoryProducer =new AbstractFactoryProducer();
+        //根据参数type获取对应的颜色工厂
+        AbstractFactory abstractFactory=abstractFactoryProducer.getFactory("shape");
+        //根据参数color获取颜色
+        abstractFactory.getColor("red").showValue();
+        abstractFactory.getColor("greed").showValue();
+        System.out.println("gg"+abstractFactory.getClass());
+        //根据参数type获取对应的图形工厂
+        abstractFactory=abstractFactoryProducer.getFactory("shape");
+        abstractFactory.getShape("Roundness").showValue();
+        abstractFactory.getShape("Trangle").showValue();
+        System.out.println("gg"+abstractFactory.getClass());
     }
 }

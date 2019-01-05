@@ -1,5 +1,4 @@
-package entity;
-
-public interface Shap {
-
+package interfaceCase;;
+public interface Shape {
+    public void showValue();
 }

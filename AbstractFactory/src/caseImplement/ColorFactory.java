@@ -1,15 +1,14 @@
 package caseImplement;
 
-import entity.Color;
-import interfaceCase.Greed;
-import interfaceCase.Red;
+import interfaceCase.Color;
+import entity.Greed;
+import entity.Red;
+import interfaceCase.Shape;
 
-public class ColorFactory {
-
-
-
-    public Color getColor(String type) {
-        if (type.equalsIgnoreCase("RED")) {
+public class ColorFactory extends AbstractFactory{
+    @Override
+    public Color getColor(String color) {
+        if (color.equalsIgnoreCase("RED")) {
             return new Red();
         } else {
 
@@ -17,5 +16,10 @@ public class ColorFactory {
 
         }
 
+    }
+
+    @Override
+    public Shape getShape(String shape) {
+        return null;
     }
 }

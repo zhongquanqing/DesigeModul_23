@@ -1,6 +1,6 @@
-package entity;
+package interfaceCase;
 
 public interface Color {
-public  void showValue();
+    public void showValue();
 
 }

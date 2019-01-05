@@ -1,7 +1,6 @@
-package interfaceCase;
+package entity;
 
-import entity.Color;
-
+import interfaceCase.Color;
 public class Red implements Color {
 
     public  void showValue(){
