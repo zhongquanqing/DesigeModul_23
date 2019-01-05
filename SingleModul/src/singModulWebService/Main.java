@@ -1,3 +1,5 @@
+package singModulWebService;
+
 import SingleModul.SinglModul;
 
 public class Main {
